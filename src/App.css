@@ -1,0 +1,64 @@
+.header{
+    border-radius: 10px;
+    height: 250px;
+}
+.navText{
+    position: absolute;
+    right: 0;
+    padding-right: 40px;
+}
+.card-img{
+    border-radius: 50%;
+    background: lightgreen;
+    padding: 3px;
+}
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+
+body {
+    background-color: #fbfbfb;
+}
+@media (min-width: 991.98px) {
+main {
+    padding-left: 240px;
+}
+}
+
+.navbar .navbar-toggler {
+    right: .25rem;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+
+.navbar-header {
+    float: none;
+}
+.navbar-toggle {
+display: block;
+}
+.navbar-collapse.collapse {
+display: none!important;
+}
+.navbar-nav {
+float: none!important;
+}
+.navbar-nav>li {
+float: none;
+}
+.navbar-collapse.collapse.in{
+display:block !important;
+}
