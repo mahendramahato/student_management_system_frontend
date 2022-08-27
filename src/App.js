@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
-import ListCustomersComponents from './components/ListCustomersComponents';
-import { AddCustomerComponent } from './components/AddCustomerComponent';
 import HeaderComponent from './components/HeaderComponent';
+import Footer from './components/Footer';
 import { Home } from './components/Home';
-import {Manager_login} from './components/Manager_login';
-import { Manager_Dashboard } from './components/Manager_Dashboard';
-import { AddCashier } from './components/AddCashier';
-import { ListCashier } from './components/ListCashier';
+import ListStudent from './components/ListStudent';
+import DetailInfo from './components/DetailInfo';
+import { AddStudent } from './components/AddStudent';
+import {AdminLogin} from './components/AdminLogin';
+import {AdminDashboard} from './components/AdminDashboard';
+import { AdminHome } from './components/AdminHome';
+import { Search } from './components/Search';
+import {Events} from './components/Events';
+import { Registration } from './components/Registration';
 
 class App extends Component {
+
   render() {
     return (
       <div>
@@ -19,18 +24,23 @@ class App extends Component {
           <div className="container">
             <Routes>
               <Route path="/home" element={<Home />} />
-              <Route path="/manager_login" element={<Manager_login />} />
-              <Route path="/manager_dashboard" element={<Manager_Dashboard />} />
               <Route exact path="/" element={<Home />} />
-              
-              <Route path="/customers" element={<ListCustomersComponents />} />
-              <Route path="/add-customer" element={<AddCustomerComponent />} />
-              <Route path="/edit-customer/:id" element={<AddCustomerComponent />} />
+              <Route path="/admin_login" element={<AdminLogin />} />
+              <Route path="/registration" element={<Registration />} />
+              <Route path="/admin_dashboard" element={<AdminDashboard />} />
 
-              <Route path="/add-cashier" element={<AddCashier />} />
-              <Route path="/cashiers" element={<ListCashier />} />
+              <Route path="/admin_home" element={<AdminHome />} />
+
+              <Route path="/students" element={<ListStudent />} />
+              <Route path="/add-student" element={<AddStudent />} />
+              <Route path="/detail-info/:id" element={<DetailInfo />} />
+              <Route path="/edit-student/:id" element={<AddStudent />} />
+
+              <Route path="/search" element={<Search />} />
+              <Route path="/events" element={<Events />} />
             </Routes>
           </div>
+          <Footer />
         </Router>
       </div>
     );
