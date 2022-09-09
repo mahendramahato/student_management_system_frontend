@@ -79,7 +79,7 @@ const DetailInfo = () => {
                                                 <h6>Guardian Email</h6>
                                                 <p className="text-muted">{student.g_email}</p>
                                             </div>
-                                        </div>
+                                        </div> 
                                     </div>
                                 </div>
                             </div>

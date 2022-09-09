@@ -87,7 +87,7 @@ export const AddStudent = () => {
               <li className="nav-item">
                   <Link to="/admin_dashboard" className="nav-link" aria-current="page">
                   <span data-feather="home" className="align-text-bottom"></span>
-                  Dashboard
+                  Dashboard <img src="/images/dashboard.svg" alt=""/>
                   </Link>
               </li>
 
@@ -97,24 +97,17 @@ export const AddStudent = () => {
                   Student Menu
                   </a>
                   <ul className="dropdown-menu dropdown-menu-light">
-                      <li><Link to="/add-student" className="dropdown-item">Add Student</Link></li>
-                      <li><Link to="/students" className="dropdown-item">List Student</Link></li>
+                      <li><Link to="/add-student" className="dropdown-item text-primary">Add Student <img src="/images/file.svg" alt=""/></Link></li>
+                      <li><Link to="/students" className="dropdown-item text-primary">List Student <img src="/images/list.svg" alt=""/></Link></li>
                   </ul>
-              </li>
-
-              <li className="nav-item">
-                  <Link to="/search" className="nav-link" aria-current="page">
-                  <span data-feather="home" className="align-text-bottom"></span>
-                  Search
-                  </Link>
               </li>
 
               <li className="nav-item">
                   <Link to="/events" className="nav-link" aria-current="page">
                   <span data-feather="home" className="align-text-bottom"></span>
-                  Events
+                  Events <img src="/images/calendar.svg" alt=""/>
                   </Link>
-              </li>
+              </li> 
 
               </ul>
           </div>

@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import {Link, Navigate, useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import UserService from '../services/UserService'
 
 export const AdminLogin = () => {
 
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState('')
   const [error, setError] = useState('')
+  
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+
+  const [isLogged, setIsLogged] = useState(null)
 
   var e = "";
   var p = "";
@@ -23,14 +26,16 @@ export const AdminLogin = () => {
     })
   }, [])
 
-  const handleSubmit = event=>{
+  const handleSubmit = (event)=>{
     event.preventDefault()
+    console.log(e)
     {
       users.map(usr=>{
         e = usr.email;
         p = usr.password;
-        if(e === email && p === password){
-          navigate('/admin_dashboard')
+        if(e === email && p === password){  
+          setIsLogged(true)  
+          navigate("/admin_dashboard") 
         }else{
           console.log("wrong email and password");
           // console.log(e, p)
@@ -38,7 +43,7 @@ export const AdminLogin = () => {
           
         }
       })
-    }
+    } 
   }
   
   return (
@@ -74,7 +79,7 @@ export const AdminLogin = () => {
               </div>
 
               {/* Error display message */}
-              {(error != "") ? (<div className="error text-center text-danger">{error}</div>) : ""}
+              {(error !== "") ? (<div className="error text-center text-danger">{error}</div>) : ""}
 
               <div className="text-center text-lg-start pt-2">
                 {/* <button type="button" className="btn btn-primary"
