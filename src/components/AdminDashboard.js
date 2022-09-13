@@ -168,7 +168,7 @@ export const AdminDashboard = () => {
                                 <div className="card-body">
                                     <div className="row text-center">
                                         <div className="col">
-                                            <img style={{ width: "75%" }} src="images/student.png" alt="" />
+                                            <img style={{ width: "75%" }} src="/images/student.png" alt="" />
                                         </div>
                                         <div className="col text-center">
                                             <h3 style={{ paddingTop: 28 }}>{students.length}</h3>
@@ -184,7 +184,7 @@ export const AdminDashboard = () => {
                                 <div className="card-body">
                                     <div className="row text-center">
                                         <div className="col">
-                                            <img style={{ width: "75%" }} src="images/male.png" alt="" />
+                                            <img style={{ width: "75%" }} src="/images/male.png" alt="" />
                                         </div>
                                         <div className="col text-center">
                                             <h3 style={{ paddingTop: 28 }}>{m}</h3>
@@ -200,7 +200,7 @@ export const AdminDashboard = () => {
                                 <div className="card-body">
                                     <div className="row text-center">
                                         <div className="col">
-                                            <img style={{ width: "75%" }} src="images/female.png" alt="" />
+                                            <img style={{ width: "75%" }} src="/images/female.png" alt="" />
                                         </div>
                                         <div className="col text-center">
                                             <h3 style={{ paddingTop: 28 }}>{f}</h3>
