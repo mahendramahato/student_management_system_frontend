@@ -24,7 +24,6 @@ class App extends Component {
           <div className="container">
             <Routes>    
               <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home />} />
               <Route path="/admin_login" element={<AdminLogin />} />              
               <Route path="/registration" element={<Registration />} />
 

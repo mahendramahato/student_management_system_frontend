@@ -63,7 +63,7 @@ export const AdminDashboard = () => {
 
                     <div className="navbar-nav">
                         <div className="nav-item text-nowrap">
-                            <Link to="/home" className="nav-link px-3">Sign Out</Link>
+                            <Link to="/admin_login" className="nav-link px-3">Sign Out</Link>
                         </div>
                     </div>
                 </header>
