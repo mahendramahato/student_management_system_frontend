@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import StudentService from '../services/StudentService'
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar'
 import format from "date-fns/format";
