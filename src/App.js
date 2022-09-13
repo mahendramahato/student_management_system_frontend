@@ -23,20 +23,20 @@ class App extends Component {
         <HeaderComponent />
           <div className="container">
             <Routes>    
-                <Route path="/home" element={<Home />} />
-                <Route exact path="/" element={<Home />} />
-                <Route path="/admin_login" element={<AdminLogin />} />              
-                <Route path="/registration" element={<Registration />} />
+              <Route exact path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/admin_login" element={<AdminLogin />} />              
+              <Route path="/registration" element={<Registration />} />
 
-                {/* these routes need to be protected */}
-                <Route element={<ProtectedRoutes isLogged={true}/>}>
-                  <Route path="/admin_dashboard" element={<AdminDashboard />} />
-                  <Route path="/students" element={<ListStudent />} />
-                  <Route path="/add-student" element={<AddStudent />} />
-                  <Route path="/detail-info/:id" element={<DetailInfo />} />
-                  <Route path="/edit-student/:id" element={<AddStudent />} />
-                  <Route path="/events" element={<Events />} />
-                </Route>
+              {/* these routes need to be protected */}
+              <Route element={<ProtectedRoutes isLogged={true}/>}>
+                <Route path="/admin_dashboard" element={<AdminDashboard />} />
+                <Route path="/students" element={<ListStudent />} />
+                <Route path="/add-student" element={<AddStudent />} />
+                <Route path="/detail-info/:id" element={<DetailInfo />} />
+                <Route path="/edit-student/:id" element={<AddStudent />} />
+                <Route path="/events" element={<Events />} />
+              </Route>
             </Routes>
           </div>
           <Footer />
