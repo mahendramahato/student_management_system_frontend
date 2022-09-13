@@ -23,7 +23,8 @@ class App extends Component {
         <HeaderComponent />
           <div className="container">
             <Routes>    
-              <Route exact path="/home" element={<Home />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
               <Route path="/admin_login" element={<AdminLogin />} />              
               <Route path="/registration" element={<Registration />} />
 
