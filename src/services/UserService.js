@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const USER_REST_API_URL = 'https://student-mgmt-sys-backend.herokuapp.com/users'
+const USER_REST_API_URL = 'https://student-mgmt-sys-backend.herokuapp.com/api/v1/users'
 
 class UserService{
 
