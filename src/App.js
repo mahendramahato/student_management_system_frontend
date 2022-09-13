@@ -4,7 +4,6 @@ import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import HeaderComponent from './components/HeaderComponent';
 import Footer from './components/Footer';
-import { Home } from './components/Home';
 import ListStudent from './components/ListStudent';
 import DetailInfo from './components/DetailInfo';
 import { AddStudent } from './components/AddStudent';
@@ -23,7 +22,7 @@ class App extends Component {
         <HeaderComponent />
           <div className="container">
             <Routes>    
-              <Route path="/" element={<Home />} />
+              <Route exact path="/" element={<AdminLogin />} />
               <Route path="/admin_login" element={<AdminLogin />} />              
               <Route path="/registration" element={<Registration />} />
 
